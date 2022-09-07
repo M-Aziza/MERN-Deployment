@@ -8,7 +8,7 @@ const Main = () =>{
     const [pets, setPets] = useState([]);
 
     useEffect( ()=>   {
-        axios.get("http://localhost:8000/api/")
+        axios.get("http://localhost:8000/api/pets")
         .then(res => setPets(res.data))
         .catch(err => console.error(err))
     },[pets])
